@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Entre reflexões e melodias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Tela 1 -->
+<div id="screen1" class="screen active">
+  <div id="stars"></div>
+  <div class="login-card">
+    <h2>Resolva a charada :</h2>
+    <p class="riddle">O que é o que é: tem cheiro de maçã, cabelo cor de vinho, é a mulher mais linda que eu já vi?</p>
+    <input id="answer" placeholder="Resposta..." autocomplete="off" />
+    <div class="hint">Dica: mora em cada pensamento meu</div>
+    <button id="checkBtn">Enviar</button>
+    <button id="comeBtn" class="hidden">Vem aqui</button>
+  </div>
+</div>
+
+<!-- Tela 2 -->
+<div id="screen2" class="screen">
+  <img src="assets/fundo1.jpg" class="bg" />
+  <div class="card2">
+    <h2>Digite as iniciais do casal</h2>
+    <div class="initials">
+      <input id="init1" maxlength="1" autocomplete="off"/>
+      <div class="plus">+</div>
+      <input id="init2" maxlength="1" autocomplete="off"/>
+    </div>
+    <button id="checkInit">Confirmar</button>
+  </div>
+  <div id="balloonArea"></div>
+</div>
+
+<!-- Tela 3 / final -->
+<div id="screen3" class="screen">
+  <div class="final-stage">
+    <div id="photos-wrapper">
+      <div id="photos" class="heart-frame">
+        <img id="photo1" src="assets/foto1.jpg" class="photo left"/>
+        <img id="photo2" src="assets/foto2.jpg" class="photo right"/>
+      </div>
+    </div>
+    <h1 id="teamo">TE AMO RAIO DE SOL</h1>
+    <div class="click-hint">Clique no coração para ver o segredo</div>
+    <div id="goldHeart" class="gold-heart" title="Clique aqui"></div>
+    <img id="photo3" src="assets/foto3.jpg" class="photo3 hidden"/>
+    <div id="secret" class="secret hidden">Você foi a melhor coisa que me aconteceu</div>
+  </div>
+  <audio id="bgm" loop autoplay>
+    <source src="assets/audio.mp3" />
+    Seu navegador não suporta áudio.
+  </audio>
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
